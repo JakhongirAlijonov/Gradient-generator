@@ -5,17 +5,14 @@ changer.addEventListener('click', () => {
     let color1 = '#'
     let color2 = '#'
     for (i = 0; i < 6; i++) {
-        const random = Math.floor(Math.random() * colors.length)
-        color1 += colors[random]
-        console.log(1);
+        const random1 = Math.floor(Math.random() * colors.length)
+        const random2 = Math.floor(Math.random() * colors.length)
+        color1 += colors[random1]
+        color2 += colors[random2]
     }
-    for (i = 0; i < 6; i++) {
-        const random = Math.floor(Math.random() * colors.length)
-        color2 += colors[random]
-
-    }
+  
 
     let deg = Math.floor(Math.random() * 360)
-    result.innerHTML = `linear-gradient: (${deg}deg, ${color1} , ${color2} )`
+    result.innerHTML = `linear-gradient(${deg}deg, ${color1} , ${color2} )`
     document.body.style.background = `linear-gradient(${deg}deg, ${color1} ,${color2})`
 })
